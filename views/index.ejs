@@ -13,6 +13,13 @@
           <input type="text" name="city" class="ghost-input" placeholder="Enter a City" required>
           <input type="submit" value="Get Weather" class="ghost=button">
         </form>
+        <% if (weather !== null) { %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if (error !== null) { %>
+          <p><%= error %></p>
+        <% } %>
       </fieldset>
     </div>
   </body>
