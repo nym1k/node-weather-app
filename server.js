@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
 
+const port = process.env.PORT || 3000
+
 const apiKey = '835e4af513e7eb9a72c386c2ca8978a6'
 
 // Define dir for static files
@@ -51,6 +53,6 @@ app.post('/', function (req, res) {
 })
 
 // Start server listening port 3000
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(port, function () {
+  console.log(`Example app listening on port ${port}!`)
 })
